@@ -1,5 +1,5 @@
 {
-	"name":"CPAP307",
+	"name":"NERO08",
 	"url":"https://vmiis.github.io/modules/panels/panel.2.html",
 	"parameters":{
 		"sql_participant" : "@('Volunteer_ID')+' '+@('Initials')+' '+@('DOB')"
