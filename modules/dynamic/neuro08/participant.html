@@ -4,7 +4,7 @@
 <script>
     function F__ID(){
         //-------------------------------------
-		_fields="_Form,Volunteer_ID|vm_id1,Initials|S3,DOB,Sex,ScreeningNumber";
+		_fields="_Form,Volunteer_ID|vm_id1,Initials|S3,DOB,Sex,ScreeningNumber,RandomisationNumber";
         _fields+=",Submit Date|DateTime,Submitted by|Author";
         //-------------------------------------
         VmInclude:__PARTS__/grid/grid.js
@@ -17,13 +17,13 @@
         //-------------------------------------
         _cell_render=function(records,I,field,td,set_value,source){
             switch(field){
-				case 'Sex':
+/*				case 'Sex':
                     VmInclude:__LIB__/vmiis/Common-Code/grid/field_gender.js
                     break;
                 case 'DOB':
                     VmInclude:__LIB__/vmiis/Common-Code/grid/field_dob.js
                     break;
-            }
+*/            }
         }
         //-------------------------------------
 		var sql0="with tb as (select Information,ID,PID,UID,PUID,S1,S3,DateTime,Author,RowNum=row_number() over (order by UID)  from [TABLE-"+_db_pid+"-@S1] where s1='neuro08')";
